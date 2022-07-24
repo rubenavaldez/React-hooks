@@ -3,9 +3,6 @@ import './App.css';
 import Todo from './components/todo'
 import TodoForm from './components/todoForm'
 
-
-
-
 function App() {
 const [todos, setTodos] = useState([{
   text:'Learn about react',
@@ -30,6 +27,14 @@ const completeTodo = index =>{
   newTodos[index].isCompleted = true;
   setTodos(newTodos);
 }
+
+const removeTodo = index =>{
+  const newTodos =[...todos];
+  newTodos.splice(index,1)
+  setTodos(newTodos)
+}
+
+
 return (
   <div className='app'>
     <div className='todo-list'>
@@ -39,6 +44,7 @@ return (
         index={index} 
         todo={todo}
         completeTodo={completeTodo}
+        removeTodo={removeTodo}
          />
       ))}
       <TodoForm addTodo={addTodo}/>
