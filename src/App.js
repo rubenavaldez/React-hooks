@@ -22,7 +22,8 @@ const [todos, setTodos] = useState([{
 ])
 
 const addTodo = text =>{
-  const NewTodos = [...todos, {test}]
+  const newTodos = [...todos, {text}]
+  setTodos(newTodos)
 }
 
 return (
