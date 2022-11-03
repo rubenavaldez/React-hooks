@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Todo from './components/todo'
 import TodoForm from './components/todoForm'
+import ReducerApp from './components/reducer';
 
 function App() {
 const [todos, setTodos] = useState([{
@@ -49,6 +50,7 @@ return (
       ))}
       <TodoForm addTodo={addTodo}/>
     </div>
+    <ReducerApp />
   </div>
 )
 }
