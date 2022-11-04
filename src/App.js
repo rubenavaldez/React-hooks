@@ -3,6 +3,10 @@ import './App.css';
 import Todo from './components/todo'
 import TodoForm from './components/todoForm'
 import ReducerApp from './components/reducer';
+import UseEffectComponent from './components/useEffectComponent'
+import UseRefHookComponent from './components/UseRefHookComponent';
+import UseLayoutEffectComponent from './components/UseLayoutEffectComponent';
+import ImperativeHandleComponent from './components/ImperativeHandleComponent';
 
 function App() {
 const [todos, setTodos] = useState([{
@@ -37,22 +41,27 @@ const removeTodo = index =>{
 
 
 return (
-  <div className='app'>
-    <div className='todo-list'>
-      {todos.map((todo, index)=>(
-        <Todo 
-        key={index} 
-        index={index} 
-        todo={todo}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-         />
+  <div className="app">
+    <div className="todo-list">
+      {todos.map((todo, index) => (
+        <Todo
+          key={index}
+          index={index}
+          todo={todo}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+        />
       ))}
-      <TodoForm addTodo={addTodo}/>
+      <TodoForm addTodo={addTodo} />
     </div>
-    <ReducerApp />
+        
+    {/* <ReducerApp />
+    <UseEffectComponent/>
+    <UseRefHookComponent/> */}
+    {/* <UseLayoutEffectComponent/> */}
+    <ImperativeHandleComponent />
   </div>
-)
+);
 }
 
 export default App;
