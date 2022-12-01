@@ -7,6 +7,7 @@ import UseEffectComponent from './components/useEffectComponent'
 import UseRefHookComponent from './components/UseRefHookComponent';
 import UseLayoutEffectComponent from './components/UseLayoutEffectComponent';
 import ImperativeHandleComponent from './components/ImperativeHandleComponent';
+import UseContextComponent from './components/UseContextComponent';
 
 function App() {
 const [todos, setTodos] = useState([{
@@ -60,6 +61,8 @@ return (
     <UseRefHookComponent/> */}
     {/* <UseLayoutEffectComponent/> */}
     <ImperativeHandleComponent />
+
+    <UseContextComponent/>
   </div>
 );
 }
